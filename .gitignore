@@ -1,2 +1,3 @@
 config.yml
 influx-alert-api
+.DS_Store
