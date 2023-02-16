@@ -23,4 +23,9 @@ This project is simply to received alert message from influx by http and send em
 - Suggest to build the code to and execute file by `go build main.go` and set up it as a service in linux server so that you can enable it and run in background
 - Swagger can be find through: http://localhost:5055/swagger/index.html
 
+## Steps Reference
+![](image/SetupAlerts.png)
+![](image/EmailNotification.png)
+![](image/LineNotification.png)
+
 Thanks!
