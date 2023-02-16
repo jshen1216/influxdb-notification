@@ -1,0 +1,17 @@
+line:
+  token: "<your line token>"
+
+email:
+  user: ""
+  password: ""
+  smtp: "<smpt>:<port>"
+  host: ""
+  sender: "m"
+  auth: true
+  to: 
+    - "example1@gmail.com"
+    - "example2@gmail.com"
+
+server: 
+  mode: "debug"
+  port: ":5555"

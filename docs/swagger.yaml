@@ -1,0 +1,62 @@
+host: localhost:5555
+info:
+  contact:
+    email: jessie.shen@bimap.co
+    name: Jessie Shen
+  description: Golang API
+  termsOfService: http://swagger.io/terms/
+  title: InfluxDB Alert Api
+  version: "2.0"
+paths:
+  /api/Alert/Email:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: receive json from influx
+        in: body
+        name: Body
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Email Test
+      tags:
+      - Alert
+  /api/Alert/Line:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: receive json from influx
+        in: body
+        name: Body
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Line Test
+      tags:
+      - Alert
+schemes:
+- http
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

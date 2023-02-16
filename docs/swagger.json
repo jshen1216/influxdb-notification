@@ -1,0 +1,94 @@
+{
+    "schemes": [
+        "http"
+    ],
+    "swagger": "2.0",
+    "info": {
+        "description": "Golang API",
+        "title": "InfluxDB Alert Api",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "Jessie Shen",
+            "email": "jessie.shen@bimap.co"
+        },
+        "version": "2.0"
+    },
+    "host": "localhost:5555",
+    "paths": {
+        "/api/Alert/Email": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Alert"
+                ],
+                "summary": "Email Test",
+                "parameters": [
+                    {
+                        "description": "receive json from influx",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Alert/Line": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Alert"
+                ],
+                "summary": "Line Test",
+                "parameters": [
+                    {
+                        "description": "receive json from influx",
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "ApiKeyAuth": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}
